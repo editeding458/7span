@@ -1,0 +1,57 @@
+.featured-image-section {
+  position: relative;
+  width: 100%;
+  padding-bottom: 70px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Pattern image layer jo video ke neeche aadhe hisse me dikhegi */
+.featured-pattern-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: left bottom;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Video container jo pattern ke upar overlap karega */
+.featured-video-container {
+  position: relative;
+  z-index: 2;
+  width: min(92%, 1380px);
+  margin: 0 auto;
+  background: #000000;
+  border: 1.5px solid #000000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.featured-video-player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  background: #000000;
+}
+
+@media (max-width: 768px) {
+  .featured-image-section {
+    padding-bottom: 40px;
+  }
+  
+  .featured-pattern-bg {
+    height: 120px;
+  }
+  
+  .featured-video-container {
+    width: 94%;
+  }
+}

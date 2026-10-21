@@ -1,0 +1,191 @@
+.knowledge-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 70px 0 100px;
+  color: #111111;
+  border-top: 1.5px solid #111111;
+}
+
+.knowledge-container {
+  width: min(100% - 64px, 1400px);
+  margin: 0 auto;
+}
+
+.blogs-badge {
+  display: inline-block;
+  background-color: #e5e5e5;
+  border-left: 2px solid black;
+  color: #111;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  margin-bottom: 22px;
+}
+
+.knowledge-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  color: #111111;
+  margin: 0 0 14px;
+}
+
+.knowledge-subtitle {
+  font-size: clamp(16px, 1.4vw, 20px);
+  color: #2b2b2b;
+  margin: 0 0 48px;
+}
+
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+.knowledge-card-wrapper {
+  position: relative;
+  display: flex;
+}
+
+
+.card-halftone-corner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+  border-right: 1.5px solid #111111;
+  border-bottom: 1.5px solid #111111;
+  background-image: 
+    radial-gradient(#111 1.2px, transparent 1.2px),
+    radial-gradient(#111 1.2px, transparent 1.2px);
+  background-size: 5px 5px;
+  background-position: 0 0, 2.5px 2.5px;
+  pointer-events: none;
+}
+
+
+.knowledge-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1.5px solid #111111;
+  border-bottom-right-radius: 65px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.knowledge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+
+.card-top-banner {
+  width: 100%;
+  height: 220px;
+  border-bottom: 1.5px solid #111111;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-banner-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  
+}
+
+.card-body-content {
+  padding: 26px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-tag-name {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.card-article-title {
+  font-size: clamp(19px, 1.6vw, 22px);
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 44px;
+  color: #111111;
+}
+
+.card-article-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.card-article-title a:hover {
+  color: #4b5563;
+}
+
+
+.card-author-meta {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.author-name {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #4b5563;
+  text-transform: uppercase;
+}
+
+.post-date {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 1024px) {
+  .knowledge-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .card-top-banner {
+    height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .knowledge-container {
+    width: calc(100% - 32px);
+  }
+
+  .card-body-content {
+    padding: 20px 20px 24px;
+  }
+
+  .card-article-title {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,386 @@
+.partnerships-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px 0;
+  border-top: 1px solid #111111;
+  border-bottom: 1px solid #111111;
+  overflow: hidden;
+  font-family: Outfit, "Outfit Fallback: Times New Roman", "Outfit Fallback: Georgia", "Outfit Fallback: Noto Serif", serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.partnerships-container {
+  width: min(100% - 64px, 1400px);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.partnerships-header {
+  flex: 0 0 33%;
+  max-width: 420px;
+  margin-top: 40px;
+}
+
+.partnerships-section .partnerships-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  color: #111111;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.partnerships-subtitle {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+.partnerships-grid-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.partnerships-pattern-bg {
+  position: absolute;
+  inset: -50px;
+  z-index: 1;
+  background-image: url("../images/dort.svg");
+  background-repeat: repeat;
+  background-size: 24px 24px;
+  background-position: 0 0;
+  pointer-events: none;
+}
+
+.partnerships-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: #ffffff;
+  border: 1px solid #111111;
+  width: 100%;
+  max-width: 630px;
+}
+
+.partner-cell {
+  border-right: 1px solid #111111;
+  border-bottom: 1px solid #111111;
+  min-height: 158px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.partner-cell:nth-child(4n) {
+  border-right: none;
+}
+
+.partner-cell:nth-child(n + 5) {
+  border-bottom: none;
+}
+
+.partner-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.border-card {
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.claude-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.claude-sun {
+  color: #d9643a;
+  font-size: 22px;
+}
+
+.claude-text-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.claude-text-wrap strong {
+  font-size: 15px;
+  color: #111;
+}
+
+.claude-text-wrap span {
+  font-size: 8px;
+  color: #555;
+}
+
+.claude-footer-tag {
+  background-color: #d94b32;
+  color: #fff;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+.clutch-badge {
+  clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+  border: 1.5px solid #1e3944;
+  background: #ffffff;
+  padding: 14px 10px;
+  min-width: 105px;
+}
+
+.clutch-top {
+  font-size: 6px;
+  letter-spacing: 0.4px;
+  color: #4b6b7a;
+  margin-bottom: 2px;
+}
+
+.clutch-brand {
+  font-size: 16px;
+  font-weight: 900;
+  color: #16303b;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 2px 0;
+  width: 100%;
+}
+
+.clutch-bottom {
+  font-size: 6px;
+  color: #4b6b7a;
+  margin-top: 2px;
+}
+
+.aws-badge {
+  border: 2px solid #ff9900;
+  padding: 10px 14px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+}
+
+.aws-brand strong {
+  font-size: 18px;
+  color: #232f3e;
+}
+
+.aws-partner-text {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #232f3e;
+  margin-top: 2px;
+}
+
+.aws-tier-text {
+  font-size: 8px;
+  color: #666;
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.webflow-badge {
+  color: #111;
+}
+
+.webflow-wreath-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wreath-leaf {
+  color: #888;
+  font-size: 14px;
+}
+
+.webflow-title {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.webflow-tier {
+  font-size: 8.5px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.pmp-badge {
+  background: #250954;
+  color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #250954;
+}
+
+.pmp-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pmp-arc-text {
+  font-size: 5.5px;
+  letter-spacing: 0.5px;
+  color: #aaa;
+}
+
+.pmp-circle strong {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.pmp-sub {
+  font-size: 5px;
+  color: #ddd;
+}
+
+.pmi-box {
+  background: #ff5500;
+  font-size: 6px;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.nuxt-badge {
+  gap: 4px;
+}
+
+.nuxt-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nuxt-triangles {
+  color: #00dc82;
+  font-size: 14px;
+}
+
+.nuxt-logo strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: #002e3b;
+}
+
+.nuxt-tier {
+  font-size: 8px;
+  color: #666;
+}
+
+.directus-badge {
+  background: #1e2638;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  min-width: 95px;
+}
+
+.directus-ribbon {
+  background: #fff;
+  color: #1e2638;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  padding: 1px 4px;
+  border-radius: 2px;
+  margin: 3px 0;
+}
+
+.directus-title {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.odoo-badge {
+  gap: 5px;
+}
+
+.odoo-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #714b67;
+  letter-spacing: -1px;
+}
+
+.odoo-pill {
+  background: #00a09d;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+@media (max-width: 1024px) {
+  .partnerships-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .partnerships-header {
+    flex: none;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .partnerships-grid-wrapper {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .partnerships-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .partner-cell {
+    border-right: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+  }
+
+  .partner-cell:nth-child(2n) {
+    border-right: none;
+  }
+
+  .partner-cell:nth-child(n + 5) {
+    border-bottom: 1px solid #111111;
+  }
+
+  .partner-cell:nth-child(n + 7) {
+    border-bottom: none;
+  }
+}

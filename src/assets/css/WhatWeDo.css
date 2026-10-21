@@ -1,0 +1,211 @@
+.what-we-do-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 0 100px;
+  color: #111111;
+  border-bottom: 1px solid #000;
+}
+
+.what-we-do-container {
+  width: min(100% - 64px, 1380px);
+  margin: 0 auto;
+}
+
+.section-badge {
+  display: inline-block;
+  background-color: #e5e5e5;
+  color: #111;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  margin-bottom: 24px;
+  border-left: 2px solid black;
+}
+
+.section-main-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  color: #111;
+}
+
+.section-subtitle {
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.5;
+  color: #222;
+  max-width: 1200px;
+  margin: 0 0 54px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px 36px;
+  position: relative;
+  background-image: 
+    radial-gradient(#111 1.2px, transparent 1.2px),
+    radial-gradient(#111 1.2px, transparent 1.2px);
+  background-size: 6px 6px;
+  background-position: 0 0, 3px 3px;
+  padding: 0;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1.5px solid #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 440px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.service-card-top {
+  padding: 32px 34px 28px;
+  border-bottom: 1.5px solid #111111;
+}
+
+/* Service Title & Animated Slash */
+.service-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #111;
+}
+
+/* / Slash animation (Round Rotate & Color Change) */
+.slash-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  transform-origin: center center;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+  user-select: none;
+}
+
+/* Card hover ya direct slash hover par 360 degree ghumega aur red hoga */
+.service-card:hover .slash-icon,
+.slash-icon:hover {
+  transform: rotate(360deg) scale(1.2);
+  color: #ff001e;
+}
+
+.service-tagline {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: #2b2b2b;
+}
+
+.service-card-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 34px 24px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.service-list li {
+  font-size: 15.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin-bottom: 11px;
+}
+
+.service-list li:last-child {
+  margin-bottom: 0;
+}
+
+.service-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+  gap: 16px;
+}
+
+.service-cta {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #555555;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  padding-bottom: 4px;
+}
+
+.service-cta:hover {
+  color: #ff001e;
+}
+
+/* Service SVG Icon Wrapper & Animation */
+/* Service SVG Icon Wrapper - Rotation hata diya gaya hai */
+.service-icon-wrapper {
+  width: 90px;
+  height: 75px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.service-svg {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.service-svg .accent-shape {
+  transition: fill 0.3s ease;
+}
+
+
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .what-we-do-container {
+    width: calc(100% - 32px);
+  }
+
+  .service-card-top,
+  .service-card-bottom {
+    padding: 22px 20px;
+  }
+
+  .service-icon-wrapper {
+    width: 70px;
+    height: 60px;
+  }
+}

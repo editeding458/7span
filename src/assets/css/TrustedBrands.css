@@ -1,0 +1,67 @@
+.trusted-brands {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 0 0;
+  background-color: #ffffff;
+  font-family: Outfit, sans-serif;
+  box-sizing: border-box;
+}
+
+.trusted-brands-badge {
+  display: inline-block;
+  margin-bottom: 15px;
+  border-left: 1px solid #000000;
+  background-color: #e7e7e7;
+  padding: 5px 12px;
+}
+
+.trusted-brands-badge span {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.app-main .trusted-brands h2 {
+  margin: 0 0 7px;
+  color: #000000;
+  font-size: clamp(30px, 2.65vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.trusted-brands p {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(17px, 1.7vw, 23px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .trusted-brands {
+    padding-top: 52px;
+  }
+
+  .trusted-brands-badge {
+    margin-bottom: 12px;
+    padding: 4px 9px;
+  }
+
+  .trusted-brands-badge span {
+    font-size: 10px;
+  }
+
+  .app-main .trusted-brands h2 {
+    font-size: 28px;
+  }
+
+  .trusted-brands p {
+    font-size: 16px;
+  }
+}

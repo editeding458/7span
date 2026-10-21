@@ -1,0 +1,88 @@
+.logo-marquee-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 22px 0 32px;
+  border-bottom: 1px solid #000000;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  /* Smooth endless horizontal flow bina kisi shuruati blank space ke */
+  animation: logo-marquee-infinite 22s linear infinite;
+  will-change: transform;
+}
+
+.logo-marquee-wrapper:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+.logo-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 64px;
+  padding-right: 64px;
+}
+
+.client-logo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.client-logo img {
+  height: 160px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes logo-marquee-infinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-marquee-wrapper {
+    padding: 18px 0 24px;
+  }
+
+  .logo-marquee-group {
+    gap: 36px;
+    padding-right: 36px;
+  }
+
+  .client-logo img {
+    height: 120px;
+    max-width: 160px;
+  }
+}
